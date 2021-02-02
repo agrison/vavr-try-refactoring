@@ -16,7 +16,7 @@ First take a look at the `AccountService` class and its related `AccountServiceT
 
 ## Solution
 
-If you want to see a solution, or if you're not able to find it you may take a look at the [solution](tree/solution) branch.
+If you want to see a solution, or if you're not able to find it you may take a look at the [solution](https://github.com/agrison/vavr-try-refactoring/tree/solution) branch.
 
 ## Practical Vavr
 

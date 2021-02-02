@@ -1,5 +1,10 @@
 package me.grison.vavr.account;
 
+/**
+ * Fake Twitter Service returning plain strings for the purpose of this example.
+ *
+ * @author Alexandre Grison (a.grison@gmail.com)
+ */
 public class TwitterService {
     public String register(String email, String name) {
         return "TwitterAccountId";

@@ -6,6 +6,12 @@ import lombok.AllArgsConstructor;
 
 import java.util.UUID;
 
+/**
+ * Account Service whose job is to provide a `register` method which let the caller
+ * register a user on a fake twitter based on its ID (UUID).
+ *
+ * @author Alexandre Grison (a.grison@gmail.com)
+ */
 @AllArgsConstructor
 public class AccountService {
 

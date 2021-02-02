@@ -5,6 +5,11 @@ import lombok.Data;
 
 import java.util.UUID;
 
+/**
+ * The User class (domain).
+ *
+ * @author Alexandre Grison (a.grison@gmail.com)
+ */
 @Data
 @Builder
 public class User {

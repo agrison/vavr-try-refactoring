@@ -5,6 +5,11 @@ import io.vavr.control.Option;
 
 import java.util.UUID;
 
+/**
+ * Dumb User Service with an in memory repository.
+ *
+ * @author Alexandre Grison (a.grison@gmail.com)
+ */
 public class UserService {
     private final Vector<User> repository = Vector.of(
             User.builder()

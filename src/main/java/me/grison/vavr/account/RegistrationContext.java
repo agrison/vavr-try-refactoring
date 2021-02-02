@@ -6,6 +6,11 @@ import lombok.With;
 
 import java.util.UUID;
 
+/**
+ * This class serves as an immutable model flowing through the registering pipeline.
+ *
+ * @author Alexandre Grison (a.grison@gmail.com)
+ */
 @With
 @Getter
 @AllArgsConstructor

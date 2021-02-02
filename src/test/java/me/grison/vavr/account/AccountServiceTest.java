@@ -10,6 +10,9 @@ import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 /**
  * In this real life example you will have to combine what you have learned on vavr
  * Refactor the AccountService, write cleaner code by using vavr
@@ -22,8 +25,8 @@ import java.util.function.Function;
  * {@link Try#onFailure(Consumer)}<br>
  */
 public class AccountServiceTest {
-    private final UUID BUD_SPENCER = UUID.fromString("376510ae-4e7e-11ea-b77f-2e728ce88125");
-    private final UUID UNKNOWN_USER = UUID.fromString("376510ae-4e7e-11ea-b77f-2e728ce88121");
+    private final UUID KEANU = UUID.fromString("adce9c3b-7b0a-48cd-bf24-dfda278ed634");
+    private final UUID UNKNOWN_USER = UUID.fromString("8c82505d-6d18-4fb7-8b1d-41d88c5bfdf9");
 
     private AccountService accountService;
 
@@ -36,14 +39,14 @@ public class AccountServiceTest {
     }
 
     @Test
-    public void register_BudSpencer_should_return_a_new_tweet_url() {
-        String tweetUrl = accountService.register(BUD_SPENCER);
-        Assert.assertEquals("TweetUrl", tweetUrl);
+    public void registering_Keanu_Reeves_should_return_a_new_tweet_url() {
+        accountService.register(KEANU)
+                .peek(url -> assertEquals("TweetUrl", url))
+                .onEmpty(() -> Assert.fail("Should not happen"));
     }
 
     @Test
-    public void register_an_unknown_user_should_return_an_error_message() {
-        String tweetUrl = accountService.register(UNKNOWN_USER);
-        Assert.assertNull(tweetUrl);
+    public void registering_an_unknown_user_should_return_an_empty_option() {
+        assertTrue(accountService.register(UNKNOWN_USER).isEmpty());
     }
 }

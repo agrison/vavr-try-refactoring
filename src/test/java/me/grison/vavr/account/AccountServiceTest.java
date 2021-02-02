@@ -22,8 +22,8 @@ import java.util.function.Function;
  * {@link Try#onFailure(Consumer)}<br>
  */
 public class AccountServiceTest {
-    private final UUID BUD_SPENCER = UUID.fromString("376510ae-4e7e-11ea-b77f-2e728ce88125");
-    private final UUID UNKNOWN_USER = UUID.fromString("376510ae-4e7e-11ea-b77f-2e728ce88121");
+    private final UUID KEANU = UUID.fromString("adce9c3b-7b0a-48cd-bf24-dfda278ed634");
+    private final UUID UNKNOWN_USER = UUID.fromString("8c82505d-6d18-4fb7-8b1d-41d88c5bfdf9");
 
     private AccountService accountService;
 
@@ -36,8 +36,8 @@ public class AccountServiceTest {
     }
 
     @Test
-    public void register_BudSpencer_should_return_a_new_tweet_url() {
-        String tweetUrl = accountService.register(BUD_SPENCER);
+    public void registering_Keanu_Reeves_should_return_a_new_tweet_url() {
+        String tweetUrl = accountService.register(KEANU);
         Assert.assertEquals("TweetUrl", tweetUrl);
     }
 
